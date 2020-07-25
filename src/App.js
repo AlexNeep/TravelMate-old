@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import config from './config'
+
 import FlightResults from './FlightResults'
 import DataInput from './DataInput'
 import airport_database from './coordinates'
+
 
 // const countries=['UK','Germany','France', 'Greece', 'Spain', 'Portugal','Ireland']
 const test_countries=['DE-sky','FR-sky','BB-sky']
@@ -89,7 +92,7 @@ class App extends Component {
 
     xhr.open("GET", `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/?query=${origin})`);
     xhr.setRequestHeader("x-rapidapi-host", "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com");
-    xhr.setRequestHeader("x-rapidapi-key", "5ec5f671demsh69cd5e3f0a55fb0p1e7a09jsnc37428d53203");
+    xhr.setRequestHeader("x-rapidapi-key", config.APIKEY);
 
     xhr.send(data);
   }
@@ -171,7 +174,7 @@ class App extends Component {
        })
         xhr.open("GET", `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/${country}/${currency}/${locale}/${origin}/${destination}/${outbound_date}?inboundpartialdate=${inbound_date}`);
         xhr.setRequestHeader("x-rapidapi-host", "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com");
-        xhr.setRequestHeader("x-rapidapi-key", "5ec5f671demsh69cd5e3f0a55fb0p1e7a09jsnc37428d53203");
+        xhr.setRequestHeader("x-rapidapi-key", config.APIKEY);
 
         xhr.send(data);
         return this.responseText
