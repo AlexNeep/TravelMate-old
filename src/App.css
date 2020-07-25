@@ -1,38 +1,184 @@
-.App {
+:root{
+  --v-dark-blue:#03045e;
+  --dark-blue:#0077b6;
+  --med-blue:#00b4d8;
+  --light-blue:#90e0ef;
+  --v-light-blue:#caf0f8;
+}
+.app{
+}
+.navbar{
+  background-color: var(--v-dark-blue);
+  height:8vh;
+
+  box-shadow: 0px 1px 2px 0 var(--v-dark-blue);
+
+  top:0vh;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  margin-left: 5vh;
+  color:var(--v-light-blue);
+}
+.nav-links{
+  color:var(--v-light-blue);
+  
+  display: flex;
+  align-items: center;
+  margin-right: 10vh;
+}
+.nav-link{
+  display: inline-block;
+  margin-left:10px;
+  margin-right: 20px;
+}
+.nav-button{
+  border-radius: 5px;
+  width:10vh;
+  padding: 0.5vh;
+  height:auto;
+
+  color:var(--v-dark-blue);
+  background-color: var(--light-blue);
+  
+  font-size: 2.5vh;
+  font-weight: 600;
+  
+  border-width: 0;
+
+  box-shadow: 0 2px 1px 0 var(--med-blue);
+
+  cursor:pointer;
+  transition: ease-in;
+  transition-duration: 0.1s;
+}
+.nav-button:hover{
+  box-shadow: 0 0 0 0;
+}
+.row{
+  display: flex;
+  height:100vh;
+  align-items: center;
+
+  background-color: var(--v-light-blue);
+}
+.selection-col{
+  margin-left: 2vh;
+  padding:2vh;
+
+  border-radius: 10px;
+  box-shadow: 0 0 1px 1px var(--v-dark-blue);
+  position: relative;
+
+  flex:1;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+ 
+  background-color: var(--v-dark-blue);
+}
+
+.results-col{
+  flex:2;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.selection-item {
+  width: 100%;
+}
+.selection-item .title{
+  font-size:16px;
+  font-weight: 600;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  color:var(--light-blue);
+}
+.selection-item input{
+  text-align: center;
+  background-color: var(--v-light-blue);
+  color:var(--v-dark-blue);
+  font-weight: 600;
+
+  border-radius: 5px;
+}
+
+.selection-button{
+  margin-top:10%;
+
+  color:var(--v-dark-blue);
+  background-color: var(--light-blue);
+  
+  border-radius: 5px;
+  border-width: 0;
+  padding:0.5vh 1vh 0.5vh 1vh;
+  font-weight: 600;
+  
+  cursor: pointer;
+}
+.flight-results{
+
+
+}
+.flight-card{
+  display: flex;
+
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width:80%;
+
+  padding: 2vh 2vh 2vh 2vh;
+
+  border-radius: 10px;
+  background-color: var(--v-dark-blue);
+  box-shadow: 0 1px 2px 0 var(--v-dark-blue);
+
+  color:var(--light-blue);
+
+}
+.flight-card .location{
+  font-weight: 600;
+  left:0%;
+
+}
+.flight-card .price{
+  margin:auto 0;
+  font-weight: 600;
+}
+.col{
+  flex:1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page-changer{
+  width:20vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 auto;
+  justify-content: space-between;
 }
+.page-button {
+  color:var(--v-dark-blue);
 
-.App-link {
-  color: #61dafb;
+  border-radius: 5px;
+
+  cursor: pointer;
 }
+.budget-slider{
+  cursor: pointer;
+}
+.budget-input{
+  text-align: center;
+  width:25%;
+  min-width: 40px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-width:0;
+  border-bottom-width: 2px;
 }
