@@ -1,0 +1,25 @@
+.flight-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 9vh;
+  width: 80%;
+
+  padding: 2vh 2vh 2vh 2vh;
+
+  border-radius: 10px;
+  background-color: #002347;
+  box-shadow: 0 0px 2px 1px #002347;
+
+  color: #ebfbff;
+}
+.flight-card .price {
+  width: 50px;
+  font-weight: 600;
+}
+.flight-card .carrier {
+  padding: 2vh 0 2vh 0;
+}

@@ -101,7 +101,7 @@ class App extends Component {
     inbound: "2020-12-01",
     trip_duration: "7",
     currency: "GBP",
-    budget: "500",
+    budget: "1500",
   };
 
   getLocalAirports = (origin) => {
@@ -390,15 +390,11 @@ class App extends Component {
           </div>
 
           <div className="results-col">
-            <div className="">
-              <div className="flight-results">
-                <FlightResults
-                  flightData={this.state.flights[0]}
-                  currency={this.state.currency}
-                  budget={this.state.budget}
-                />
-              </div>
-            </div>
+            <FlightResults
+              flightData={this.state.flights[0]}
+              currency={this.state.currency}
+              budget={this.state.budget}
+            />
           </div>
         </div>
       </div>

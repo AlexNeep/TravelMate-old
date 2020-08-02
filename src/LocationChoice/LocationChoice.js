@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import uniqueId from "../newids";
+import uniqueId from "../Functions/newids";
 import Suggestions from "../Suggestions/Suggestions";
 
 import "./LocationChoice.css";

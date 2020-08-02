@@ -1,0 +1,20 @@
+.flight-info .route {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flight-info div {
+  text-align: center;
+  width: 100px;
+}
+.flight-info .location {
+  font-weight: 600;
+}
+.flight-info .arrow {
+  color: #ebfbff;
+  padding: 0 2vh 0 2vh;
+}
+.flight-info .carrier {
+  padding: 2vh 0 2vh 0;
+}
