@@ -13,14 +13,24 @@ input {
 button {
   border: 0;
 }
+
+h1 {
+}
+h3 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.dark {
+  color: #002347;
+}
+
 .row {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   padding: 5vh 0 5vh 0;
   flex-wrap: wrap;
   height: 100vh;
-  align-items: center;
   background-color: #ebfbff;
 }
 .selection-col {

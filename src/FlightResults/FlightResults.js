@@ -3,6 +3,9 @@ import React, { Component } from "react";
 import FlightCard from "../FlightCard/FlightCard";
 import Pagination from "../Pagination/Pagination";
 
+import loading_img from "../images/TravelMate.svg";
+
+import "./FlightResults.css";
 class FlightResults extends Component {
   state = {
     perPage: 5,
@@ -101,35 +104,44 @@ class FlightResults extends Component {
       this.state.perPage
     );
 
-    return (
-      <div className="flight-results">
-        {visible_flights.map((flight, index) => (
-          <FlightCard
-            key={index}
-            origin={this.decodeJsonId(
-              flight.origin,
-              this.props.flightData.locations
-            )}
-            destination={this.decodeJsonId(
-              flight.destination,
-              this.props.flightData.locations
-            )}
-            carrier={this.decodeJsonId(
-              flight.carrier,
-              this.props.flightData.carriers
-            )}
-            price={flight.price}
-            currency={this.decodeCurrency(this.props.currency)}
+    if (visible_flights.length === 0) {
+      return (
+        <div>
+          <img className="loading-img" src={loading_img} />
+          <h3 className="dark"> Find your next (affordable) holiday</h3>
+        </div>
+      );
+    } else {
+      return (
+        <div className="flight-results">
+          {visible_flights.map((flight, index) => (
+            <FlightCard
+              key={index}
+              origin={this.decodeJsonId(
+                flight.origin,
+                this.props.flightData.locations
+              )}
+              destination={this.decodeJsonId(
+                flight.destination,
+                this.props.flightData.locations
+              )}
+              carrier={this.decodeJsonId(
+                flight.carrier,
+                this.props.flightData.carriers
+              )}
+              price={flight.price}
+              currency={this.decodeCurrency(this.props.currency)}
+            />
+          ))}
+          <Pagination
+            decrementPageByOne={this.decrementPageByOne}
+            incrementPageByOne={this.incrementPageByOne}
+            current_page={this.state.current_page}
+            total_pages={this.state.total_pages}
           />
-        ))}
-        <Pagination
-          decrementPageByOne={this.decrementPageByOne}
-          incrementPageByOne={this.incrementPageByOne}
-          current_page={this.state.current_page}
-          total_pages={this.state.total_pages}
-        />
-      </div>
-    );
+        </div>
+      );
+    }
   }
 }
 export default FlightResults;

@@ -14,20 +14,20 @@ export default class Pagination extends Component {
       >
         <div className="page-changer">
           <div>
-            <button
+            <div
               className="page-button"
               onClick={() => this.props.decrementPageByOne()}
             >
               <FaArrowLeft />
-            </button>
+            </div>
           </div>
           <div>
-            <button
+            <div
               className="page-button"
               onClick={() => this.props.incrementPageByOne()}
             >
               <FaArrowRight />
-            </button>
+            </div>
           </div>
         </div>
         <div className="page-count">
